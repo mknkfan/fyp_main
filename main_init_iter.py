@@ -79,7 +79,7 @@ def main():
     # Load trained agent (base weights)
     # =========================
     base_agent = QLearningAgent(state_size=9, action_size=8)
-    base_agent.q_table = np.load("rl_ga_q_table_500_300_8.npy")
+    base_agent.q_table = np.load("rl_agent/rl_ga_q_table_500_300_8.npy")
     base_agent.epsilon = 0.05  # low exploration during evaluation
 
     all_problems_results = {}

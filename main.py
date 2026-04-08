@@ -107,7 +107,7 @@ def main():
     
     # LOAD TRAINED AGENT
     trained_agent = QLearningAgent(state_size=9, action_size=8)
-    trained_agent.q_table = np.load("rl_ga_q_table_500_300_8.npy") 
+    trained_agent.q_table = np.load("rl_agent/rl_ga_q_table_500_300_8.npy") 
     trained_agent.epsilon = 0.0
 
     print("=== Robotic Workcell Layout Optimization ===")
@@ -117,7 +117,6 @@ def main():
     print()
     
     runs = 1
-    #optimizer_list = [GeneticAlgorithm, RLGeneticAlgorithm]
     optimizer_list = [GeneticAlgorithm, RLGeneticAlgorithm]
     
     comparison_results = {
