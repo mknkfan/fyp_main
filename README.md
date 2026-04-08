@@ -19,7 +19,3 @@ This repository contains the code and results for my final year project on [brie
 ## Usage
 
 [Add instructions on how to run the main scripts]
-
-## Results
-
-[Brief summary of findings]
