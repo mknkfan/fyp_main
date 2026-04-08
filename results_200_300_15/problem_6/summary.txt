@@ -1,0 +1,14 @@
+Problem 6 summary
+Sequence: [1, 2, 3, 4, 5, 6, 7, 8]
+Workspace: (-15, 15, -15, 15)
+
+GeneticAlgorithm:
+  Best Fitness: 35.1953 ± 2.1737 (min=32.1232, max=36.8266)
+  Execution Time (s): 204.0816 ± 2.0505
+  Total Distance: 33.6237 ± 2.1540
+
+RLGeneticAlgorithm:
+  Best Fitness: 34.6674 ± 0.8159 (min=34.0419, max=35.8199)
+  Execution Time (s): 244.6999 ± 19.8165
+  Total Distance: 33.2845 ± 0.7768
+
