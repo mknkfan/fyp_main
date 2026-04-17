@@ -1,0 +1,745 @@
+=== Robotic Workcell Layout Optimization ===
+Machines: 8
+Sequence: [1, 2, 3, 4, 5, 6, 7, 8]
+Workspace: (-15, 15, -15, 15)
+
+
+======================================================================
+Run 1/1
+======================================================================
+
+
+--- GeneticAlgorithm ---
+Starting Genetic Algorithm Optimization
+Generation 0: Best=111.77, Avg=138.85, Diversity=416.098
+Generation 20: Best=61.98, Avg=71.67, Diversity=365.035
+Generation 40: Best=42.17, Avg=48.46, Diversity=274.593
+Generation 60: Best=36.15, Avg=39.23, Diversity=208.382
+Generation 80: Best=33.56, Avg=36.04, Diversity=182.166
+Generation 100: Best=32.46, Avg=35.21, Diversity=176.932
+Generation 120: Best=31.60, Avg=33.21, Diversity=165.909
+Generation 140: Best=31.15, Avg=33.27, Diversity=165.013
+Generation 160: Best=30.92, Avg=32.30, Diversity=173.689
+Generation 180: Best=30.64, Avg=32.81, Diversity=176.715
+Generation 200: Best=30.14, Avg=32.77, Diversity=175.526
+Generation 220: Best=30.12, Avg=31.91, Diversity=205.793
+Generation 240: Best=30.08, Avg=31.55, Diversity=161.184
+Generation 260: Best=30.07, Avg=30.99, Diversity=160.245
+Generation 280: Best=30.06, Avg=31.11, Diversity=150.081
+
+=== RUN RESULTS ===
+Best Fitness: 30.01
+Total Distance: 28.54 units
+Execution Time: 218.41 seconds
+Generations: 300
+Animation saved as layout_evolution_geneticalgorithm_2.gif
+
+--- RLGeneticAlgorithm ---
+Starting Reinforcement Learning - Genetic Algorithm
+Gen 0: Best=111.77, Avg=138.85, Diversity=416.10
+[RL] Gen 0: Action=1, Reward=0.000, MutRate=0.080, CrossRate=0.800, LS_Prob=0.10
+Gen 1: Best=110.26, Avg=136.22, Diversity=420.85
+[RL] Gen 1: Action=1, Reward=0.014, MutRate=0.060, CrossRate=0.800, LS_Prob=0.10
+Gen 2: Best=105.26, Avg=129.48, Diversity=416.20
+[RL] Gen 2: Action=1, Reward=0.045, MutRate=0.040, CrossRate=0.800, LS_Prob=0.10
+Gen 3: Best=104.78, Avg=124.46, Diversity=401.24
+[RL] Gen 3: Action=1, Reward=0.005, MutRate=0.020, CrossRate=0.800, LS_Prob=0.10
+Gen 4: Best=93.95, Avg=119.30, Diversity=383.62
+[RL] Gen 4: Action=0, Reward=0.103, MutRate=0.040, CrossRate=0.800, LS_Prob=0.10
+Gen 5: Best=90.98, Avg=115.01, Diversity=368.32
+[RL] Gen 5: Action=0, Reward=0.032, MutRate=0.060, CrossRate=0.800, LS_Prob=0.10
+Gen 6: Best=86.27, Avg=110.45, Diversity=365.54
+[RL] Gen 6: Action=0, Reward=0.052, MutRate=0.080, CrossRate=0.800, LS_Prob=0.10
+Gen 7: Best=86.19, Avg=105.52, Diversity=363.85
+[RL] Gen 7: Action=0, Reward=0.001, MutRate=0.100, CrossRate=0.800, LS_Prob=0.10
+Gen 8: Best=76.90, Avg=101.71, Diversity=383.06
+[RL] Gen 8: Action=0, Reward=0.108, MutRate=0.120, CrossRate=0.800, LS_Prob=0.10
+Gen 9: Best=75.43, Avg=97.07, Diversity=392.49
+[RL] Gen 9: Action=0, Reward=0.019, MutRate=0.140, CrossRate=0.800, LS_Prob=0.10
+Gen 10: Best=67.93, Avg=92.90, Diversity=388.99
+[RL] Gen 10: Action=0, Reward=0.099, MutRate=0.160, CrossRate=0.800, LS_Prob=0.10
+Gen 11: Best=67.93, Avg=87.52, Diversity=390.82
+[RL] Gen 11: Action=0, Reward=-0.100, MutRate=0.180, CrossRate=0.800, LS_Prob=0.10
+Gen 12: Best=66.38, Avg=82.47, Diversity=385.05
+[RL] Gen 12: Action=0, Reward=0.023, MutRate=0.200, CrossRate=0.800, LS_Prob=0.10
+Gen 13: Best=65.36, Avg=79.62, Diversity=379.98
+[RL] Gen 13: Action=0, Reward=0.015, MutRate=0.220, CrossRate=0.800, LS_Prob=0.10
+Gen 14: Best=59.75, Avg=76.09, Diversity=376.97
+[RL] Gen 14: Action=0, Reward=0.086, MutRate=0.240, CrossRate=0.800, LS_Prob=0.10
+Gen 15: Best=59.75, Avg=74.02, Diversity=372.47
+[RL] Gen 15: Action=0, Reward=-0.100, MutRate=0.260, CrossRate=0.800, LS_Prob=0.10
+Gen 16: Best=59.75, Avg=72.77, Diversity=374.53
+[RL] Gen 16: Action=1, Reward=-0.100, MutRate=0.240, CrossRate=0.800, LS_Prob=0.10
+Gen 17: Best=59.75, Avg=72.34, Diversity=382.77
+[RL] Gen 17: Action=2, Reward=-0.100, MutRate=0.240, CrossRate=0.850, LS_Prob=0.10
+Gen 18: Best=59.75, Avg=72.35, Diversity=378.81
+[RL] Gen 18: Action=3, Reward=-0.100, MutRate=0.240, CrossRate=0.800, LS_Prob=0.10
+Gen 19: Best=58.66, Avg=69.70, Diversity=379.61
+[RL] Gen 19: Action=0, Reward=0.018, MutRate=0.260, CrossRate=0.800, LS_Prob=0.10
+Gen 20: Best=58.66, Avg=68.20, Diversity=377.14
+[RL] Gen 20: Action=3, Reward=-0.100, MutRate=0.260, CrossRate=0.750, LS_Prob=0.10
+Gen 21: Best=56.14, Avg=68.35, Diversity=378.21
+[RL] Gen 21: Action=0, Reward=0.043, MutRate=0.280, CrossRate=0.750, LS_Prob=0.10
+Gen 22: Best=56.14, Avg=67.30, Diversity=384.66
+[RL] Gen 22: Action=3, Reward=-0.100, MutRate=0.280, CrossRate=0.700, LS_Prob=0.10
+Gen 23: Best=56.14, Avg=67.29, Diversity=383.29
+[RL] Gen 23: Action=4, Reward=-0.100, MutRate=0.280, CrossRate=0.700, LS_Prob=0.20
+Gen 24: Best=55.30, Avg=66.99, Diversity=380.86
+[RL] Gen 24: Action=0, Reward=0.015, MutRate=0.300, CrossRate=0.700, LS_Prob=0.20
+Gen 25: Best=55.30, Avg=67.33, Diversity=376.87
+[RL] Gen 25: Action=4, Reward=-0.100, MutRate=0.300, CrossRate=0.700, LS_Prob=0.30
+Gen 26: Best=55.30, Avg=65.55, Diversity=374.68
+[RL] Gen 26: Action=5, Reward=-0.100, MutRate=0.300, CrossRate=0.700, LS_Prob=0.20
+Gen 27: Best=55.30, Avg=67.14, Diversity=385.14
+[RL] Gen 27: Action=6, Reward=-0.100, MutRate=0.300, CrossRate=0.700, LS_Prob=0.20
+Gen 28: Best=52.78, Avg=64.63, Diversity=377.42
+[RL] Gen 28: Action=1, Reward=0.046, MutRate=0.280, CrossRate=0.700, LS_Prob=0.20
+Gen 29: Best=52.78, Avg=62.59, Diversity=371.97
+[RL] Gen 29: Action=6, Reward=-0.100, MutRate=0.280, CrossRate=0.700, LS_Prob=0.20
+Gen 30: Best=51.79, Avg=63.84, Diversity=370.61
+[RL] Gen 30: Action=2, Reward=0.019, MutRate=0.280, CrossRate=0.750, LS_Prob=0.20
+Gen 31: Best=51.79, Avg=64.25, Diversity=369.75
+[RL] Gen 31: Action=6, Reward=-0.100, MutRate=0.280, CrossRate=0.750, LS_Prob=0.20
+Gen 32: Best=51.79, Avg=63.17, Diversity=372.35
+[RL] Gen 32: Action=7, Reward=-0.100, MutRate=0.190, CrossRate=0.775, LS_Prob=0.10
+Gen 33: Best=51.79, Avg=62.77, Diversity=366.97
+[RL] Gen 33: Action=6, Reward=-0.100, MutRate=0.190, CrossRate=0.775, LS_Prob=0.10
+Gen 34: Best=51.79, Avg=60.95, Diversity=358.71
+[RL] Gen 34: Action=3, Reward=-0.100, MutRate=0.190, CrossRate=0.725, LS_Prob=0.10
+Gen 35: Best=50.59, Avg=60.22, Diversity=337.91
+[RL] Gen 35: Action=3, Reward=0.023, MutRate=0.190, CrossRate=0.675, LS_Prob=0.10
+Gen 36: Best=49.44, Avg=59.48, Diversity=337.41
+[RL] Gen 36: Action=3, Reward=0.023, MutRate=0.190, CrossRate=0.625, LS_Prob=0.10
+Gen 37: Best=49.03, Avg=58.67, Diversity=327.42
+[RL] Gen 37: Action=3, Reward=0.008, MutRate=0.190, CrossRate=0.575, LS_Prob=0.10
+Gen 38: Best=48.44, Avg=58.45, Diversity=331.22
+[RL] Gen 38: Action=3, Reward=0.012, MutRate=0.190, CrossRate=0.525, LS_Prob=0.10
+Gen 39: Best=48.44, Avg=58.12, Diversity=341.41
+[RL] Gen 39: Action=3, Reward=-0.100, MutRate=0.190, CrossRate=0.475, LS_Prob=0.10
+Gen 40: Best=47.68, Avg=57.54, Diversity=338.56
+[RL] Gen 40: Action=4, Reward=0.016, MutRate=0.190, CrossRate=0.475, LS_Prob=0.20
+Gen 41: Best=46.86, Avg=56.26, Diversity=333.90
+[RL] Gen 41: Action=4, Reward=0.017, MutRate=0.190, CrossRate=0.475, LS_Prob=0.30
+Gen 42: Best=46.86, Avg=55.51, Diversity=334.37
+[RL] Gen 42: Action=3, Reward=-0.100, MutRate=0.190, CrossRate=0.425, LS_Prob=0.30
+Gen 43: Best=46.50, Avg=53.40, Diversity=327.18
+[RL] Gen 43: Action=5, Reward=0.008, MutRate=0.190, CrossRate=0.425, LS_Prob=0.20
+Gen 44: Best=44.88, Avg=52.52, Diversity=330.33
+[RL] Gen 44: Action=5, Reward=0.035, MutRate=0.190, CrossRate=0.425, LS_Prob=0.10
+Gen 45: Best=44.88, Avg=52.10, Diversity=327.26
+[RL] Gen 45: Action=3, Reward=-0.100, MutRate=0.190, CrossRate=0.375, LS_Prob=0.10
+Gen 46: Best=44.88, Avg=50.83, Diversity=322.38
+[RL] Gen 46: Action=0, Reward=-0.100, MutRate=0.210, CrossRate=0.375, LS_Prob=0.10
+Gen 47: Best=44.71, Avg=49.90, Diversity=326.86
+[RL] Gen 47: Action=6, Reward=0.004, MutRate=0.210, CrossRate=0.375, LS_Prob=0.10
+Gen 48: Best=44.71, Avg=50.10, Diversity=331.50
+[RL] Gen 48: Action=0, Reward=-0.100, MutRate=0.230, CrossRate=0.375, LS_Prob=0.10
+Gen 49: Best=44.52, Avg=51.05, Diversity=337.46
+[RL] Gen 49: Action=7, Reward=0.004, MutRate=0.165, CrossRate=0.587, LS_Prob=0.05
+Gen 50: Best=44.52, Avg=50.53, Diversity=312.35
+[RL] Gen 50: Action=0, Reward=-0.100, MutRate=0.185, CrossRate=0.587, LS_Prob=0.05
+Gen 51: Best=41.67, Avg=48.55, Diversity=319.32
+[RL] Gen 51: Action=3, Reward=0.064, MutRate=0.185, CrossRate=0.537, LS_Prob=0.05
+Gen 52: Best=41.67, Avg=49.15, Diversity=295.48
+[RL] Gen 52: Action=4, Reward=-0.100, MutRate=0.185, CrossRate=0.537, LS_Prob=0.15
+Gen 53: Best=41.67, Avg=48.46, Diversity=302.17
+[RL] Gen 53: Action=0, Reward=-0.100, MutRate=0.205, CrossRate=0.537, LS_Prob=0.15
+Gen 54: Best=41.67, Avg=48.32, Diversity=297.61
+[RL] Gen 54: Action=4, Reward=-0.100, MutRate=0.205, CrossRate=0.537, LS_Prob=0.25
+Gen 55: Best=41.52, Avg=49.87, Diversity=306.77
+[RL] Gen 55: Action=5, Reward=0.004, MutRate=0.205, CrossRate=0.537, LS_Prob=0.15
+Gen 56: Best=41.52, Avg=49.45, Diversity=315.21
+[RL] Gen 56: Action=4, Reward=-0.100, MutRate=0.205, CrossRate=0.537, LS_Prob=0.25
+Gen 57: Best=41.39, Avg=51.08, Diversity=322.17
+[RL] Gen 57: Action=4, Reward=0.003, MutRate=0.205, CrossRate=0.537, LS_Prob=0.35
+Gen 58: Best=40.05, Avg=49.83, Diversity=316.17
+[RL] Gen 58: Action=4, Reward=0.032, MutRate=0.205, CrossRate=0.537, LS_Prob=0.45
+Gen 59: Best=40.05, Avg=49.03, Diversity=331.83
+[RL] Gen 59: Action=4, Reward=-0.100, MutRate=0.205, CrossRate=0.537, LS_Prob=0.55
+Gen 60: Best=39.63, Avg=47.89, Diversity=327.90
+[RL] Gen 60: Action=0, Reward=0.011, MutRate=0.225, CrossRate=0.537, LS_Prob=0.55
+Gen 61: Best=39.34, Avg=48.53, Diversity=332.72
+[RL] Gen 61: Action=0, Reward=0.007, MutRate=0.245, CrossRate=0.537, LS_Prob=0.55
+Gen 62: Best=39.09, Avg=48.68, Diversity=341.48
+[RL] Gen 62: Action=0, Reward=0.006, MutRate=0.265, CrossRate=0.537, LS_Prob=0.55
+Gen 63: Best=39.09, Avg=49.58, Diversity=339.35
+[RL] Gen 63: Action=4, Reward=-0.100, MutRate=0.265, CrossRate=0.537, LS_Prob=0.65
+Gen 64: Best=39.09, Avg=49.59, Diversity=348.00
+[RL] Gen 64: Action=3, Reward=-0.100, MutRate=0.265, CrossRate=0.487, LS_Prob=0.65
+Gen 65: Best=38.63, Avg=44.35, Diversity=340.77
+[RL] Gen 65: Action=2, Reward=0.012, MutRate=0.265, CrossRate=0.537, LS_Prob=0.65
+Gen 66: Best=38.63, Avg=43.89, Diversity=344.14
+[RL] Gen 66: Action=3, Reward=-0.100, MutRate=0.265, CrossRate=0.487, LS_Prob=0.65
+Gen 67: Best=38.55, Avg=46.35, Diversity=348.87
+[RL] Gen 67: Action=1, Reward=0.002, MutRate=0.245, CrossRate=0.487, LS_Prob=0.65
+Gen 68: Best=38.11, Avg=45.83, Diversity=340.65
+[RL] Gen 68: Action=1, Reward=0.011, MutRate=0.225, CrossRate=0.487, LS_Prob=0.65
+Gen 69: Best=37.01, Avg=45.64, Diversity=339.14
+[RL] Gen 69: Action=1, Reward=0.029, MutRate=0.205, CrossRate=0.487, LS_Prob=0.65
+Gen 70: Best=36.50, Avg=43.06, Diversity=338.00
+[RL] Gen 70: Action=1, Reward=0.014, MutRate=0.185, CrossRate=0.487, LS_Prob=0.65
+Gen 71: Best=36.31, Avg=42.25, Diversity=334.76
+[RL] Gen 71: Action=1, Reward=0.005, MutRate=0.165, CrossRate=0.487, LS_Prob=0.65
+Gen 72: Best=36.31, Avg=41.47, Diversity=335.07
+[RL] Gen 72: Action=3, Reward=-0.100, MutRate=0.165, CrossRate=0.437, LS_Prob=0.65
+Gen 73: Best=36.31, Avg=41.55, Diversity=317.97
+[RL] Gen 73: Action=1, Reward=-0.100, MutRate=0.145, CrossRate=0.437, LS_Prob=0.65
+Gen 74: Best=35.99, Avg=41.99, Diversity=306.74
+[RL] Gen 74: Action=7, Reward=0.009, MutRate=0.123, CrossRate=0.619, LS_Prob=0.32
+Gen 75: Best=35.91, Avg=41.05, Diversity=284.00
+[RL] Gen 75: Action=6, Reward=0.002, MutRate=0.123, CrossRate=0.619, LS_Prob=0.32
+Gen 76: Best=35.22, Avg=40.28, Diversity=278.65
+[RL] Gen 76: Action=6, Reward=0.019, MutRate=0.123, CrossRate=0.619, LS_Prob=0.32
+Gen 77: Best=35.22, Avg=39.84, Diversity=269.59
+[RL] Gen 77: Action=4, Reward=-0.100, MutRate=0.123, CrossRate=0.619, LS_Prob=0.42
+Gen 78: Best=34.78, Avg=38.86, Diversity=261.63
+[RL] Gen 78: Action=4, Reward=0.013, MutRate=0.123, CrossRate=0.619, LS_Prob=0.52
+Gen 79: Best=33.34, Avg=38.32, Diversity=260.28
+[RL] Gen 79: Action=4, Reward=0.041, MutRate=0.123, CrossRate=0.619, LS_Prob=0.62
+Gen 80: Best=33.33, Avg=38.45, Diversity=245.97
+[RL] Gen 80: Action=4, Reward=0.000, MutRate=0.123, CrossRate=0.619, LS_Prob=0.72
+Gen 81: Best=33.33, Avg=39.11, Diversity=234.72
+[RL] Gen 81: Action=4, Reward=-0.100, MutRate=0.123, CrossRate=0.619, LS_Prob=0.82
+Gen 82: Best=33.33, Avg=37.33, Diversity=222.35
+[RL] Gen 82: Action=4, Reward=-0.100, MutRate=0.123, CrossRate=0.619, LS_Prob=0.92
+Gen 83: Best=33.13, Avg=37.47, Diversity=230.33
+[RL] Gen 83: Action=3, Reward=0.006, MutRate=0.123, CrossRate=0.569, LS_Prob=0.92
+Gen 84: Best=32.42, Avg=38.60, Diversity=235.19
+[RL] Gen 84: Action=3, Reward=0.021, MutRate=0.123, CrossRate=0.519, LS_Prob=0.92
+Gen 85: Best=32.16, Avg=36.96, Diversity=233.01
+[RL] Gen 85: Action=3, Reward=0.008, MutRate=0.123, CrossRate=0.469, LS_Prob=0.92
+Gen 86: Best=32.16, Avg=37.02, Diversity=219.72
+[RL] Gen 86: Action=4, Reward=-0.100, MutRate=0.123, CrossRate=0.469, LS_Prob=1.00
+Gen 87: Best=31.93, Avg=36.01, Diversity=245.36
+[RL] Gen 87: Action=0, Reward=0.007, MutRate=0.143, CrossRate=0.469, LS_Prob=1.00
+Gen 88: Best=31.53, Avg=36.20, Diversity=241.63
+[RL] Gen 88: Action=0, Reward=0.013, MutRate=0.163, CrossRate=0.469, LS_Prob=1.00
+Gen 89: Best=31.50, Avg=34.63, Diversity=253.15
+[RL] Gen 89: Action=0, Reward=0.001, MutRate=0.182, CrossRate=0.469, LS_Prob=1.00
+Gen 90: Best=30.97, Avg=34.73, Diversity=273.32
+[RL] Gen 90: Action=0, Reward=0.017, MutRate=0.202, CrossRate=0.469, LS_Prob=1.00
+Gen 91: Best=30.97, Avg=35.03, Diversity=293.20
+[RL] Gen 91: Action=4, Reward=-0.100, MutRate=0.202, CrossRate=0.469, LS_Prob=1.00
+Gen 92: Best=30.69, Avg=33.69, Diversity=298.00
+[RL] Gen 92: Action=4, Reward=0.009, MutRate=0.202, CrossRate=0.469, LS_Prob=1.00
+Gen 93: Best=30.69, Avg=34.89, Diversity=290.22
+[RL] Gen 93: Action=4, Reward=-0.100, MutRate=0.202, CrossRate=0.469, LS_Prob=1.00
+Gen 94: Best=30.60, Avg=34.20, Diversity=289.86
+[RL] Gen 94: Action=5, Reward=0.003, MutRate=0.202, CrossRate=0.469, LS_Prob=0.90
+Gen 95: Best=30.28, Avg=34.51, Diversity=312.19
+[RL] Gen 95: Action=6, Reward=0.010, MutRate=0.202, CrossRate=0.469, LS_Prob=0.90
+Gen 96: Best=30.08, Avg=36.04, Diversity=321.42
+[RL] Gen 96: Action=6, Reward=0.007, MutRate=0.202, CrossRate=0.469, LS_Prob=0.90
+Gen 97: Best=29.72, Avg=35.40, Diversity=323.26
+[RL] Gen 97: Action=6, Reward=0.012, MutRate=0.202, CrossRate=0.469, LS_Prob=0.90
+Gen 98: Best=29.72, Avg=35.12, Diversity=313.67
+[RL] Gen 98: Action=1, Reward=-0.100, MutRate=0.182, CrossRate=0.469, LS_Prob=0.90
+Gen 99: Best=29.58, Avg=33.56, Diversity=306.29
+[RL] Gen 99: Action=1, Reward=0.005, MutRate=0.163, CrossRate=0.469, LS_Prob=0.90
+Gen 100: Best=29.24, Avg=33.85, Diversity=298.03
+[RL] Gen 100: Action=5, Reward=0.011, MutRate=0.163, CrossRate=0.469, LS_Prob=0.80
+Gen 101: Best=29.24, Avg=33.32, Diversity=303.10
+[RL] Gen 101: Action=1, Reward=-0.100, MutRate=0.143, CrossRate=0.469, LS_Prob=0.80
+Gen 102: Best=29.24, Avg=33.45, Diversity=262.39
+[RL] Gen 102: Action=4, Reward=-0.100, MutRate=0.143, CrossRate=0.469, LS_Prob=0.90
+Gen 103: Best=28.76, Avg=33.46, Diversity=226.99
+[RL] Gen 103: Action=5, Reward=0.017, MutRate=0.143, CrossRate=0.469, LS_Prob=0.80
+Gen 104: Best=28.74, Avg=34.15, Diversity=240.16
+[RL] Gen 104: Action=5, Reward=0.001, MutRate=0.143, CrossRate=0.469, LS_Prob=0.70
+Gen 105: Best=28.53, Avg=33.03, Diversity=242.87
+[RL] Gen 105: Action=5, Reward=0.007, MutRate=0.143, CrossRate=0.469, LS_Prob=0.60
+Gen 106: Best=28.53, Avg=33.14, Diversity=237.06
+[RL] Gen 106: Action=4, Reward=-0.100, MutRate=0.143, CrossRate=0.469, LS_Prob=0.70
+Gen 107: Best=28.53, Avg=33.30, Diversity=231.72
+[RL] Gen 107: Action=4, Reward=-0.100, MutRate=0.143, CrossRate=0.469, LS_Prob=0.80
+Gen 108: Best=28.53, Avg=32.96, Diversity=251.10
+[RL] Gen 108: Action=4, Reward=-0.100, MutRate=0.143, CrossRate=0.469, LS_Prob=0.90
+Gen 109: Best=28.20, Avg=32.83, Diversity=242.46
+[RL] Gen 109: Action=5, Reward=0.012, MutRate=0.143, CrossRate=0.469, LS_Prob=0.80
+Gen 110: Best=28.06, Avg=32.61, Diversity=237.08
+[RL] Gen 110: Action=5, Reward=0.005, MutRate=0.143, CrossRate=0.469, LS_Prob=0.70
+Gen 111: Best=28.06, Avg=32.03, Diversity=255.17
+[RL] Gen 111: Action=4, Reward=-0.100, MutRate=0.143, CrossRate=0.469, LS_Prob=0.80
+Gen 112: Best=28.06, Avg=31.02, Diversity=256.25
+[RL] Gen 112: Action=4, Reward=-0.100, MutRate=0.143, CrossRate=0.469, LS_Prob=0.90
+Gen 113: Best=28.03, Avg=31.27, Diversity=244.83
+[RL] Gen 113: Action=5, Reward=0.001, MutRate=0.143, CrossRate=0.469, LS_Prob=0.80
+Gen 114: Best=28.03, Avg=30.67, Diversity=246.54
+[RL] Gen 114: Action=4, Reward=-0.100, MutRate=0.143, CrossRate=0.469, LS_Prob=0.90
+Gen 115: Best=28.00, Avg=31.63, Diversity=252.74
+[RL] Gen 115: Action=2, Reward=0.001, MutRate=0.143, CrossRate=0.519, LS_Prob=0.90
+Gen 116: Best=27.66, Avg=32.08, Diversity=258.43
+[RL] Gen 116: Action=2, Reward=0.012, MutRate=0.143, CrossRate=0.569, LS_Prob=0.90
+Gen 117: Best=27.65, Avg=31.86, Diversity=257.45
+[RL] Gen 117: Action=2, Reward=0.000, MutRate=0.143, CrossRate=0.619, LS_Prob=0.90
+Gen 118: Best=27.49, Avg=31.80, Diversity=266.82
+[RL] Gen 118: Action=2, Reward=0.006, MutRate=0.143, CrossRate=0.669, LS_Prob=0.90
+Gen 119: Best=27.37, Avg=31.98, Diversity=261.64
+[RL] Gen 119: Action=2, Reward=0.004, MutRate=0.143, CrossRate=0.719, LS_Prob=0.90
+Gen 120: Best=27.34, Avg=30.60, Diversity=266.59
+[RL] Gen 120: Action=2, Reward=0.001, MutRate=0.143, CrossRate=0.769, LS_Prob=0.90
+Gen 121: Best=27.16, Avg=30.14, Diversity=257.17
+[RL] Gen 121: Action=2, Reward=0.007, MutRate=0.143, CrossRate=0.819, LS_Prob=0.90
+Gen 122: Best=27.16, Avg=29.73, Diversity=243.26
+[RL] Gen 122: Action=4, Reward=-0.100, MutRate=0.143, CrossRate=0.819, LS_Prob=1.00
+Gen 123: Best=27.16, Avg=30.78, Diversity=245.80
+[RL] Gen 123: Action=4, Reward=-0.100, MutRate=0.143, CrossRate=0.819, LS_Prob=1.00
+Gen 124: Best=27.11, Avg=32.32, Diversity=250.27
+[RL] Gen 124: Action=6, Reward=0.002, MutRate=0.143, CrossRate=0.819, LS_Prob=1.00
+Gen 125: Best=26.98, Avg=30.69, Diversity=247.20
+[RL] Gen 125: Action=6, Reward=0.005, MutRate=0.143, CrossRate=0.819, LS_Prob=1.00
+Gen 126: Best=26.83, Avg=31.23, Diversity=247.97
+[RL] Gen 126: Action=6, Reward=0.005, MutRate=0.143, CrossRate=0.819, LS_Prob=1.00
+Gen 127: Best=26.83, Avg=29.50, Diversity=266.04
+[RL] Gen 127: Action=4, Reward=-0.100, MutRate=0.143, CrossRate=0.819, LS_Prob=1.00
+Gen 128: Best=26.76, Avg=29.94, Diversity=235.19
+[RL] Gen 128: Action=3, Reward=0.003, MutRate=0.143, CrossRate=0.769, LS_Prob=1.00
+Gen 129: Best=26.76, Avg=30.10, Diversity=251.46
+[RL] Gen 129: Action=4, Reward=-0.100, MutRate=0.143, CrossRate=0.769, LS_Prob=1.00
+Gen 130: Best=26.66, Avg=30.21, Diversity=235.32
+[RL] Gen 130: Action=1, Reward=0.004, MutRate=0.123, CrossRate=0.769, LS_Prob=1.00
+Gen 131: Best=26.65, Avg=30.90, Diversity=224.83
+[RL] Gen 131: Action=3, Reward=0.000, MutRate=0.123, CrossRate=0.719, LS_Prob=1.00
+Gen 132: Best=26.62, Avg=31.63, Diversity=239.48
+[RL] Gen 132: Action=1, Reward=0.001, MutRate=0.103, CrossRate=0.719, LS_Prob=1.00
+Gen 133: Best=26.52, Avg=30.22, Diversity=232.16
+[RL] Gen 133: Action=1, Reward=0.004, MutRate=0.083, CrossRate=0.719, LS_Prob=1.00
+Gen 134: Best=26.51, Avg=29.82, Diversity=191.26
+[RL] Gen 134: Action=1, Reward=0.001, MutRate=0.062, CrossRate=0.719, LS_Prob=1.00
+Gen 135: Best=26.45, Avg=28.89, Diversity=161.13
+[RL] Gen 135: Action=1, Reward=0.002, MutRate=0.042, CrossRate=0.719, LS_Prob=1.00
+Gen 136: Best=26.33, Avg=28.32, Diversity=110.47
+[RL] Gen 136: Action=1, Reward=0.004, MutRate=0.022, CrossRate=0.719, LS_Prob=1.00
+Gen 137: Best=26.33, Avg=27.79, Diversity=82.07
+[RL] Gen 137: Action=4, Reward=-0.100, MutRate=0.022, CrossRate=0.719, LS_Prob=1.00
+Gen 138: Best=26.32, Avg=27.07, Diversity=47.14
+[RL] Gen 138: Action=3, Reward=0.000, MutRate=0.022, CrossRate=0.669, LS_Prob=1.00
+Gen 139: Best=26.14, Avg=26.72, Diversity=34.34
+[RL] Gen 139: Action=0, Reward=0.007, MutRate=0.042, CrossRate=0.669, LS_Prob=1.00
+Gen 140: Best=26.14, Avg=26.61, Diversity=53.85
+[RL] Gen 140: Action=4, Reward=-0.100, MutRate=0.042, CrossRate=0.669, LS_Prob=1.00
+Gen 141: Best=26.10, Avg=26.70, Diversity=58.54
+[RL] Gen 141: Action=2, Reward=0.002, MutRate=0.042, CrossRate=0.719, LS_Prob=1.00
+Gen 142: Best=26.07, Avg=26.64, Diversity=74.34
+[RL] Gen 142: Action=2, Reward=0.001, MutRate=0.042, CrossRate=0.769, LS_Prob=1.00
+Gen 143: Best=26.03, Avg=26.26, Diversity=62.21
+[RL] Gen 143: Action=2, Reward=0.002, MutRate=0.042, CrossRate=0.819, LS_Prob=1.00
+Gen 144: Best=26.02, Avg=26.32, Diversity=65.11
+[RL] Gen 144: Action=3, Reward=0.000, MutRate=0.042, CrossRate=0.769, LS_Prob=1.00
+Gen 145: Best=26.01, Avg=26.54, Diversity=97.70
+[RL] Gen 145: Action=2, Reward=0.000, MutRate=0.042, CrossRate=0.819, LS_Prob=1.00
+Gen 146: Best=25.97, Avg=26.86, Diversity=136.95
+[RL] Gen 146: Action=2, Reward=0.002, MutRate=0.042, CrossRate=0.869, LS_Prob=1.00
+Gen 147: Best=25.65, Avg=26.35, Diversity=162.70
+[RL] Gen 147: Action=2, Reward=0.012, MutRate=0.042, CrossRate=0.919, LS_Prob=1.00
+Gen 148: Best=25.58, Avg=26.48, Diversity=171.03
+[RL] Gen 148: Action=2, Reward=0.003, MutRate=0.042, CrossRate=0.969, LS_Prob=1.00
+Gen 149: Best=25.58, Avg=26.44, Diversity=119.84
+[RL] Gen 149: Action=4, Reward=-0.100, MutRate=0.042, CrossRate=0.969, LS_Prob=1.00
+Gen 150: Best=25.58, Avg=26.30, Diversity=63.94
+[RL] Gen 150: Action=4, Reward=-0.100, MutRate=0.042, CrossRate=0.969, LS_Prob=1.00
+Gen 151: Best=25.47, Avg=26.42, Diversity=62.37
+[RL] Gen 151: Action=7, Reward=0.005, MutRate=0.071, CrossRate=0.884, LS_Prob=0.50
+Gen 152: Best=25.47, Avg=26.77, Diversity=115.30
+[RL] Gen 152: Action=4, Reward=-0.100, MutRate=0.071, CrossRate=0.884, LS_Prob=0.60
+Gen 153: Best=25.44, Avg=26.82, Diversity=102.81
+[RL] Gen 153: Action=5, Reward=0.001, MutRate=0.071, CrossRate=0.884, LS_Prob=0.50
+Gen 154: Best=25.42, Avg=26.79, Diversity=100.70
+[RL] Gen 154: Action=5, Reward=0.001, MutRate=0.071, CrossRate=0.884, LS_Prob=0.40
+Gen 155: Best=25.40, Avg=26.27, Diversity=123.53
+[RL] Gen 155: Action=5, Reward=0.001, MutRate=0.071, CrossRate=0.884, LS_Prob=0.30
+Gen 156: Best=25.37, Avg=26.18, Diversity=125.58
+[RL] Gen 156: Action=5, Reward=0.001, MutRate=0.071, CrossRate=0.884, LS_Prob=0.20
+Gen 157: Best=25.37, Avg=26.85, Diversity=136.11
+[RL] Gen 157: Action=4, Reward=-0.100, MutRate=0.071, CrossRate=0.884, LS_Prob=0.30
+Gen 158: Best=25.33, Avg=26.59, Diversity=97.20
+[RL] Gen 158: Action=1, Reward=0.002, MutRate=0.051, CrossRate=0.884, LS_Prob=0.30
+Gen 159: Best=25.33, Avg=26.50, Diversity=93.08
+[RL] Gen 159: Action=4, Reward=-0.100, MutRate=0.051, CrossRate=0.884, LS_Prob=0.40
+Gen 160: Best=25.32, Avg=26.19, Diversity=83.47
+[RL] Gen 160: Action=3, Reward=0.000, MutRate=0.051, CrossRate=0.834, LS_Prob=0.40
+Gen 161: Best=25.31, Avg=26.06, Diversity=89.69
+[RL] Gen 161: Action=2, Reward=0.001, MutRate=0.051, CrossRate=0.884, LS_Prob=0.40
+Gen 162: Best=25.31, Avg=25.96, Diversity=91.44
+[RL] Gen 162: Action=3, Reward=0.000, MutRate=0.051, CrossRate=0.834, LS_Prob=0.40
+Gen 163: Best=25.30, Avg=26.21, Diversity=77.47
+[RL] Gen 163: Action=3, Reward=0.000, MutRate=0.051, CrossRate=0.784, LS_Prob=0.40
+Gen 164: Best=25.30, Avg=25.74, Diversity=72.59
+[RL] Gen 164: Action=4, Reward=-0.100, MutRate=0.051, CrossRate=0.784, LS_Prob=0.50
+Gen 165: Best=25.30, Avg=25.63, Diversity=79.70
+[RL] Gen 165: Action=4, Reward=-0.100, MutRate=0.051, CrossRate=0.784, LS_Prob=0.60
+Gen 166: Best=25.30, Avg=25.76, Diversity=81.23
+[RL] Gen 166: Action=4, Reward=-0.100, MutRate=0.051, CrossRate=0.784, LS_Prob=0.70
+Gen 167: Best=25.28, Avg=25.62, Diversity=69.35
+[RL] Gen 167: Action=2, Reward=0.001, MutRate=0.051, CrossRate=0.834, LS_Prob=0.70
+Gen 168: Best=25.28, Avg=25.79, Diversity=80.67
+[RL] Gen 168: Action=4, Reward=-0.100, MutRate=0.051, CrossRate=0.834, LS_Prob=0.80
+Gen 169: Best=25.27, Avg=25.93, Diversity=79.41
+[RL] Gen 169: Action=6, Reward=0.000, MutRate=0.051, CrossRate=0.834, LS_Prob=0.80
+Gen 170: Best=25.27, Avg=25.85, Diversity=84.74
+[RL] Gen 170: Action=6, Reward=0.000, MutRate=0.051, CrossRate=0.834, LS_Prob=0.80
+Gen 171: Best=25.27, Avg=26.03, Diversity=80.60
+[RL] Gen 171: Action=6, Reward=0.000, MutRate=0.051, CrossRate=0.834, LS_Prob=0.80
+Gen 172: Best=25.27, Avg=26.01, Diversity=97.01
+[RL] Gen 172: Action=4, Reward=-0.100, MutRate=0.051, CrossRate=0.834, LS_Prob=0.90
+Gen 173: Best=25.25, Avg=25.86, Diversity=67.86
+[RL] Gen 173: Action=6, Reward=0.001, MutRate=0.051, CrossRate=0.834, LS_Prob=0.90
+Gen 174: Best=25.25, Avg=26.06, Diversity=77.46
+[RL] Gen 174: Action=7, Reward=0.000, MutRate=0.076, CrossRate=0.817, LS_Prob=0.45
+Gen 175: Best=25.25, Avg=25.68, Diversity=87.35
+[RL] Gen 175: Action=7, Reward=0.000, MutRate=0.088, CrossRate=0.809, LS_Prob=0.22
+Gen 176: Best=25.25, Avg=26.23, Diversity=142.77
+[RL] Gen 176: Action=7, Reward=0.000, MutRate=0.094, CrossRate=0.804, LS_Prob=0.11
+Gen 177: Best=25.25, Avg=26.48, Diversity=164.19
+[RL] Gen 177: Action=4, Reward=-0.100, MutRate=0.094, CrossRate=0.804, LS_Prob=0.21
+Gen 178: Best=25.25, Avg=26.64, Diversity=153.51
+[RL] Gen 178: Action=4, Reward=0.000, MutRate=0.094, CrossRate=0.804, LS_Prob=0.31
+Gen 179: Best=25.24, Avg=26.29, Diversity=155.84
+[RL] Gen 179: Action=4, Reward=0.000, MutRate=0.094, CrossRate=0.804, LS_Prob=0.41
+Gen 180: Best=25.22, Avg=25.85, Diversity=147.53
+[RL] Gen 180: Action=6, Reward=0.001, MutRate=0.094, CrossRate=0.804, LS_Prob=0.41
+Gen 181: Best=25.22, Avg=26.30, Diversity=168.84
+[RL] Gen 181: Action=4, Reward=-0.100, MutRate=0.094, CrossRate=0.804, LS_Prob=0.51
+Gen 182: Best=25.22, Avg=27.13, Diversity=170.07
+[RL] Gen 182: Action=4, Reward=-0.100, MutRate=0.094, CrossRate=0.804, LS_Prob=0.61
+Gen 183: Best=25.22, Avg=27.32, Diversity=182.28
+[RL] Gen 183: Action=4, Reward=-0.100, MutRate=0.094, CrossRate=0.804, LS_Prob=0.71
+Gen 184: Best=25.22, Avg=27.13, Diversity=163.47
+[RL] Gen 184: Action=4, Reward=-0.100, MutRate=0.094, CrossRate=0.804, LS_Prob=0.81
+Gen 185: Best=25.22, Avg=26.81, Diversity=136.39
+[RL] Gen 185: Action=4, Reward=0.000, MutRate=0.094, CrossRate=0.804, LS_Prob=0.91
+Gen 186: Best=25.21, Avg=27.01, Diversity=154.21
+[RL] Gen 186: Action=4, Reward=0.000, MutRate=0.094, CrossRate=0.804, LS_Prob=1.00
+Gen 187: Best=25.21, Avg=27.11, Diversity=156.18
+[RL] Gen 187: Action=4, Reward=0.000, MutRate=0.094, CrossRate=0.804, LS_Prob=1.00
+Gen 188: Best=25.21, Avg=27.75, Diversity=165.28
+[RL] Gen 188: Action=4, Reward=0.000, MutRate=0.094, CrossRate=0.804, LS_Prob=1.00
+Gen 189: Best=25.21, Avg=27.85, Diversity=151.37
+[RL] Gen 189: Action=4, Reward=-0.100, MutRate=0.094, CrossRate=0.804, LS_Prob=1.00
+Gen 190: Best=25.21, Avg=28.18, Diversity=154.55
+[RL] Gen 190: Action=4, Reward=-0.100, MutRate=0.094, CrossRate=0.804, LS_Prob=1.00
+Gen 191: Best=25.21, Avg=27.72, Diversity=151.07
+[RL] Gen 191: Action=0, Reward=0.000, MutRate=0.114, CrossRate=0.804, LS_Prob=1.00
+Gen 192: Best=25.20, Avg=28.34, Diversity=174.35
+[RL] Gen 192: Action=0, Reward=0.000, MutRate=0.134, CrossRate=0.804, LS_Prob=1.00
+Gen 193: Best=25.20, Avg=27.06, Diversity=202.14
+[RL] Gen 193: Action=0, Reward=0.000, MutRate=0.154, CrossRate=0.804, LS_Prob=1.00
+Gen 194: Best=25.20, Avg=27.33, Diversity=229.13
+[RL] Gen 194: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.804, LS_Prob=1.00
+Gen 195: Best=25.20, Avg=27.32, Diversity=260.48
+[RL] Gen 195: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.804, LS_Prob=1.00
+Gen 196: Best=25.20, Avg=27.64, Diversity=283.01
+[RL] Gen 196: Action=2, Reward=0.000, MutRate=0.154, CrossRate=0.854, LS_Prob=1.00
+Gen 197: Best=25.20, Avg=27.33, Diversity=284.46
+[RL] Gen 197: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.854, LS_Prob=1.00
+Gen 198: Best=25.20, Avg=27.91, Diversity=275.28
+[RL] Gen 198: Action=3, Reward=0.000, MutRate=0.154, CrossRate=0.804, LS_Prob=1.00
+Gen 199: Best=25.20, Avg=28.94, Diversity=271.18
+[RL] Gen 199: Action=3, Reward=0.000, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 200: Best=25.20, Avg=28.52, Diversity=279.68
+[RL] Gen 200: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 201: Best=25.20, Avg=27.48, Diversity=257.49
+[RL] Gen 201: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 202: Best=25.18, Avg=27.70, Diversity=252.57
+[RL] Gen 202: Action=4, Reward=0.001, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 203: Best=25.18, Avg=27.75, Diversity=276.61
+[RL] Gen 203: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 204: Best=25.18, Avg=28.32, Diversity=264.09
+[RL] Gen 204: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 205: Best=25.18, Avg=27.00, Diversity=279.32
+[RL] Gen 205: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 206: Best=25.18, Avg=26.23, Diversity=265.87
+[RL] Gen 206: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 207: Best=25.18, Avg=26.56, Diversity=276.54
+[RL] Gen 207: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 208: Best=25.18, Avg=27.36, Diversity=283.77
+[RL] Gen 208: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 209: Best=25.18, Avg=26.94, Diversity=279.98
+[RL] Gen 209: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 210: Best=25.18, Avg=26.90, Diversity=274.31
+[RL] Gen 210: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 211: Best=25.18, Avg=28.08, Diversity=260.16
+[RL] Gen 211: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 212: Best=25.18, Avg=27.95, Diversity=266.27
+[RL] Gen 212: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 213: Best=25.18, Avg=27.60, Diversity=281.76
+[RL] Gen 213: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 214: Best=25.18, Avg=28.27, Diversity=279.09
+[RL] Gen 214: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 215: Best=25.18, Avg=27.73, Diversity=274.48
+[RL] Gen 215: Action=6, Reward=0.000, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 216: Best=25.17, Avg=27.87, Diversity=264.63
+[RL] Gen 216: Action=6, Reward=0.000, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 217: Best=25.17, Avg=27.49, Diversity=258.68
+[RL] Gen 217: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 218: Best=25.17, Avg=27.22, Diversity=267.72
+[RL] Gen 218: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 219: Best=25.17, Avg=26.74, Diversity=275.49
+[RL] Gen 219: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 220: Best=25.17, Avg=26.54, Diversity=289.28
+[RL] Gen 220: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 221: Best=25.17, Avg=27.06, Diversity=281.11
+[RL] Gen 221: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 222: Best=25.17, Avg=27.24, Diversity=276.25
+[RL] Gen 222: Action=4, Reward=-0.100, MutRate=0.154, CrossRate=0.754, LS_Prob=1.00
+Gen 223: Best=25.17, Avg=26.97, Diversity=266.17
+[RL] Gen 223: Action=7, Reward=0.000, MutRate=0.127, CrossRate=0.777, LS_Prob=0.50
+Gen 224: Best=25.17, Avg=29.17, Diversity=272.50
+[RL] Gen 224: Action=7, Reward=0.000, MutRate=0.113, CrossRate=0.789, LS_Prob=0.25
+Gen 225: Best=25.17, Avg=28.19, Diversity=266.07
+[RL] Gen 225: Action=4, Reward=-0.100, MutRate=0.113, CrossRate=0.789, LS_Prob=0.35
+Gen 226: Best=25.17, Avg=28.58, Diversity=257.31
+[RL] Gen 226: Action=4, Reward=-0.100, MutRate=0.113, CrossRate=0.789, LS_Prob=0.45
+Gen 227: Best=25.17, Avg=27.46, Diversity=239.67
+[RL] Gen 227: Action=4, Reward=-0.100, MutRate=0.113, CrossRate=0.789, LS_Prob=0.55
+Gen 228: Best=25.16, Avg=27.18, Diversity=220.20
+[RL] Gen 228: Action=3, Reward=0.000, MutRate=0.113, CrossRate=0.739, LS_Prob=0.55
+Gen 229: Best=25.16, Avg=28.00, Diversity=220.68
+[RL] Gen 229: Action=4, Reward=-0.100, MutRate=0.113, CrossRate=0.739, LS_Prob=0.65
+Gen 230: Best=25.16, Avg=27.57, Diversity=217.90
+[RL] Gen 230: Action=4, Reward=-0.100, MutRate=0.113, CrossRate=0.739, LS_Prob=0.75
+Gen 231: Best=25.16, Avg=27.52, Diversity=205.33
+[RL] Gen 231: Action=1, Reward=-0.100, MutRate=0.093, CrossRate=0.739, LS_Prob=0.75
+Gen 232: Best=25.16, Avg=27.48, Diversity=182.55
+[RL] Gen 232: Action=5, Reward=0.000, MutRate=0.093, CrossRate=0.739, LS_Prob=0.65
+Gen 233: Best=25.16, Avg=26.93, Diversity=181.37
+[RL] Gen 233: Action=1, Reward=-0.100, MutRate=0.073, CrossRate=0.739, LS_Prob=0.65
+Gen 234: Best=25.16, Avg=27.02, Diversity=163.83
+[RL] Gen 234: Action=4, Reward=0.000, MutRate=0.073, CrossRate=0.739, LS_Prob=0.75
+Gen 235: Best=25.16, Avg=26.68, Diversity=136.74
+[RL] Gen 235: Action=1, Reward=-0.100, MutRate=0.053, CrossRate=0.739, LS_Prob=0.75
+Gen 236: Best=25.13, Avg=25.86, Diversity=86.31
+[RL] Gen 236: Action=0, Reward=0.001, MutRate=0.073, CrossRate=0.739, LS_Prob=0.75
+Gen 237: Best=25.13, Avg=25.93, Diversity=134.27
+[RL] Gen 237: Action=1, Reward=-0.100, MutRate=0.053, CrossRate=0.739, LS_Prob=0.75
+Gen 238: Best=25.13, Avg=25.84, Diversity=89.54
+[RL] Gen 238: Action=1, Reward=-0.100, MutRate=0.033, CrossRate=0.739, LS_Prob=0.75
+Gen 239: Best=25.13, Avg=25.92, Diversity=86.94
+[RL] Gen 239: Action=1, Reward=-0.100, MutRate=0.013, CrossRate=0.739, LS_Prob=0.75
+Gen 240: Best=25.13, Avg=25.48, Diversity=44.44
+[RL] Gen 240: Action=1, Reward=-0.100, MutRate=0.010, CrossRate=0.739, LS_Prob=0.75
+Gen 241: Best=25.13, Avg=25.42, Diversity=17.97
+[RL] Gen 241: Action=5, Reward=-0.100, MutRate=0.010, CrossRate=0.739, LS_Prob=0.65
+Gen 242: Best=25.13, Avg=25.31, Diversity=15.22
+[RL] Gen 242: Action=2, Reward=-0.100, MutRate=0.010, CrossRate=0.789, LS_Prob=0.65
+Gen 243: Best=25.13, Avg=25.19, Diversity=11.25
+[RL] Gen 243: Action=3, Reward=-0.100, MutRate=0.010, CrossRate=0.739, LS_Prob=0.65
+Gen 244: Best=25.13, Avg=25.14, Diversity=12.51
+[RL] Gen 244: Action=4, Reward=-0.100, MutRate=0.010, CrossRate=0.739, LS_Prob=0.75
+Gen 245: Best=25.13, Avg=25.26, Diversity=11.89
+[RL] Gen 245: Action=6, Reward=-0.100, MutRate=0.010, CrossRate=0.739, LS_Prob=0.75
+Gen 246: Best=25.13, Avg=25.19, Diversity=9.17
+[RL] Gen 246: Action=0, Reward=-0.100, MutRate=0.030, CrossRate=0.739, LS_Prob=0.75
+Gen 247: Best=25.13, Avg=25.59, Diversity=43.28
+[RL] Gen 247: Action=1, Reward=-0.100, MutRate=0.010, CrossRate=0.739, LS_Prob=0.75
+Gen 248: Best=25.13, Avg=25.18, Diversity=15.56
+[RL] Gen 248: Action=7, Reward=-0.100, MutRate=0.055, CrossRate=0.769, LS_Prob=0.37
+Gen 249: Best=25.13, Avg=25.45, Diversity=90.86
+[RL] Gen 249: Action=5, Reward=-0.100, MutRate=0.055, CrossRate=0.769, LS_Prob=0.27
+Gen 250: Best=25.13, Avg=26.06, Diversity=102.15
+[RL] Gen 250: Action=2, Reward=-0.100, MutRate=0.055, CrossRate=0.819, LS_Prob=0.27
+Gen 251: Best=25.13, Avg=25.66, Diversity=105.85
+[RL] Gen 251: Action=3, Reward=-0.100, MutRate=0.055, CrossRate=0.769, LS_Prob=0.27
+Gen 252: Best=25.13, Avg=25.68, Diversity=84.36
+[RL] Gen 252: Action=4, Reward=-0.100, MutRate=0.055, CrossRate=0.769, LS_Prob=0.37
+Gen 253: Best=25.13, Avg=25.88, Diversity=91.29
+[RL] Gen 253: Action=6, Reward=-0.100, MutRate=0.055, CrossRate=0.769, LS_Prob=0.37
+Gen 254: Best=25.13, Avg=25.78, Diversity=86.77
+[RL] Gen 254: Action=0, Reward=-0.100, MutRate=0.075, CrossRate=0.769, LS_Prob=0.37
+Gen 255: Best=25.13, Avg=25.99, Diversity=106.64
+[RL] Gen 255: Action=1, Reward=-0.100, MutRate=0.055, CrossRate=0.769, LS_Prob=0.37
+Gen 256: Best=25.13, Avg=25.78, Diversity=96.11
+[RL] Gen 256: Action=7, Reward=-0.100, MutRate=0.077, CrossRate=0.785, LS_Prob=0.19
+Gen 257: Best=25.13, Avg=25.85, Diversity=124.71
+[RL] Gen 257: Action=5, Reward=-0.100, MutRate=0.077, CrossRate=0.785, LS_Prob=0.09
+Gen 258: Best=25.13, Avg=25.78, Diversity=152.59
+[RL] Gen 258: Action=2, Reward=-0.100, MutRate=0.077, CrossRate=0.835, LS_Prob=0.09
+Gen 259: Best=25.13, Avg=25.89, Diversity=126.32
+[RL] Gen 259: Action=3, Reward=-0.100, MutRate=0.077, CrossRate=0.785, LS_Prob=0.09
+Gen 260: Best=25.13, Avg=26.20, Diversity=157.10
+[RL] Gen 260: Action=4, Reward=-0.100, MutRate=0.077, CrossRate=0.785, LS_Prob=0.19
+Gen 261: Best=25.13, Avg=26.12, Diversity=149.73
+[RL] Gen 261: Action=6, Reward=-0.100, MutRate=0.077, CrossRate=0.785, LS_Prob=0.19
+Gen 262: Best=25.13, Avg=26.44, Diversity=145.72
+[RL] Gen 262: Action=0, Reward=-0.100, MutRate=0.098, CrossRate=0.785, LS_Prob=0.19
+Gen 263: Best=25.13, Avg=26.51, Diversity=138.43
+[RL] Gen 263: Action=1, Reward=-0.100, MutRate=0.077, CrossRate=0.785, LS_Prob=0.19
+Gen 264: Best=25.13, Avg=26.21, Diversity=145.53
+[RL] Gen 264: Action=7, Reward=-0.100, MutRate=0.089, CrossRate=0.792, LS_Prob=0.09
+Gen 265: Best=25.13, Avg=26.69, Diversity=138.24
+[RL] Gen 265: Action=5, Reward=-0.100, MutRate=0.089, CrossRate=0.792, LS_Prob=0.00
+Gen 266: Best=25.13, Avg=26.53, Diversity=159.68
+[RL] Gen 266: Action=2, Reward=-0.100, MutRate=0.089, CrossRate=0.842, LS_Prob=0.00
+Gen 267: Best=25.13, Avg=26.82, Diversity=153.25
+[RL] Gen 267: Action=3, Reward=-0.100, MutRate=0.089, CrossRate=0.792, LS_Prob=0.00
+Gen 268: Best=25.13, Avg=26.57, Diversity=152.91
+[RL] Gen 268: Action=4, Reward=-0.100, MutRate=0.089, CrossRate=0.792, LS_Prob=0.10
+Gen 269: Best=25.13, Avg=26.46, Diversity=155.14
+[RL] Gen 269: Action=6, Reward=-0.100, MutRate=0.089, CrossRate=0.792, LS_Prob=0.10
+Gen 270: Best=25.13, Avg=26.09, Diversity=158.01
+[RL] Gen 270: Action=0, Reward=-0.100, MutRate=0.109, CrossRate=0.792, LS_Prob=0.10
+Gen 271: Best=25.13, Avg=26.54, Diversity=175.14
+[RL] Gen 271: Action=1, Reward=-0.100, MutRate=0.089, CrossRate=0.792, LS_Prob=0.10
+Gen 272: Best=25.13, Avg=26.86, Diversity=165.36
+[RL] Gen 272: Action=7, Reward=-0.100, MutRate=0.094, CrossRate=0.796, LS_Prob=0.05
+Gen 273: Best=25.13, Avg=26.71, Diversity=197.26
+[RL] Gen 273: Action=5, Reward=-0.100, MutRate=0.094, CrossRate=0.796, LS_Prob=0.00
+Gen 274: Best=25.13, Avg=26.73, Diversity=153.03
+[RL] Gen 274: Action=2, Reward=-0.100, MutRate=0.094, CrossRate=0.846, LS_Prob=0.00
+Gen 275: Best=25.13, Avg=26.78, Diversity=170.55
+[RL] Gen 275: Action=3, Reward=-0.100, MutRate=0.094, CrossRate=0.796, LS_Prob=0.00
+Gen 276: Best=25.13, Avg=27.18, Diversity=162.37
+[RL] Gen 276: Action=4, Reward=-0.100, MutRate=0.094, CrossRate=0.796, LS_Prob=0.10
+Gen 277: Best=25.13, Avg=26.99, Diversity=167.72
+[RL] Gen 277: Action=6, Reward=-0.100, MutRate=0.094, CrossRate=0.796, LS_Prob=0.10
+Gen 278: Best=25.13, Avg=26.25, Diversity=155.37
+[RL] Gen 278: Action=0, Reward=-0.100, MutRate=0.114, CrossRate=0.796, LS_Prob=0.10
+Gen 279: Best=25.13, Avg=26.44, Diversity=170.29
+[RL] Gen 279: Action=1, Reward=-0.100, MutRate=0.094, CrossRate=0.796, LS_Prob=0.10
+Gen 280: Best=25.13, Avg=27.08, Diversity=180.40
+[RL] Gen 280: Action=7, Reward=-0.100, MutRate=0.097, CrossRate=0.798, LS_Prob=0.05
+Gen 281: Best=25.13, Avg=26.22, Diversity=178.48
+[RL] Gen 281: Action=5, Reward=-0.100, MutRate=0.097, CrossRate=0.798, LS_Prob=0.00
+Gen 282: Best=25.13, Avg=27.30, Diversity=178.06
+[RL] Gen 282: Action=2, Reward=-0.100, MutRate=0.097, CrossRate=0.848, LS_Prob=0.00
+Gen 283: Best=25.13, Avg=26.79, Diversity=165.29
+[RL] Gen 283: Action=3, Reward=-0.100, MutRate=0.097, CrossRate=0.798, LS_Prob=0.00
+Gen 284: Best=25.13, Avg=26.55, Diversity=177.11
+[RL] Gen 284: Action=4, Reward=-0.100, MutRate=0.097, CrossRate=0.798, LS_Prob=0.10
+Gen 285: Best=25.13, Avg=27.16, Diversity=181.17
+[RL] Gen 285: Action=6, Reward=-0.100, MutRate=0.097, CrossRate=0.798, LS_Prob=0.10
+Gen 286: Best=25.13, Avg=26.96, Diversity=154.08
+[RL] Gen 286: Action=0, Reward=-0.100, MutRate=0.117, CrossRate=0.798, LS_Prob=0.10
+Gen 287: Best=25.13, Avg=27.48, Diversity=180.87
+[RL] Gen 287: Action=1, Reward=-0.100, MutRate=0.097, CrossRate=0.798, LS_Prob=0.10
+Gen 288: Best=25.13, Avg=26.74, Diversity=183.32
+[RL] Gen 288: Action=7, Reward=-0.100, MutRate=0.099, CrossRate=0.799, LS_Prob=0.05
+Gen 289: Best=25.13, Avg=27.30, Diversity=191.14
+[RL] Gen 289: Action=5, Reward=-0.100, MutRate=0.099, CrossRate=0.799, LS_Prob=0.00
+Gen 290: Best=25.13, Avg=27.58, Diversity=172.73
+[RL] Gen 290: Action=2, Reward=-0.100, MutRate=0.099, CrossRate=0.849, LS_Prob=0.00
+Gen 291: Best=25.13, Avg=27.55, Diversity=162.45
+[RL] Gen 291: Action=3, Reward=-0.100, MutRate=0.099, CrossRate=0.799, LS_Prob=0.00
+Gen 292: Best=25.13, Avg=27.48, Diversity=166.61
+[RL] Gen 292: Action=4, Reward=-0.100, MutRate=0.099, CrossRate=0.799, LS_Prob=0.10
+Gen 293: Best=25.13, Avg=26.72, Diversity=185.34
+[RL] Gen 293: Action=6, Reward=-0.100, MutRate=0.099, CrossRate=0.799, LS_Prob=0.10
+Gen 294: Best=25.13, Avg=26.83, Diversity=165.32
+[RL] Gen 294: Action=0, Reward=-0.100, MutRate=0.119, CrossRate=0.799, LS_Prob=0.10
+Gen 295: Best=25.13, Avg=27.23, Diversity=183.26
+[RL] Gen 295: Action=1, Reward=-0.100, MutRate=0.099, CrossRate=0.799, LS_Prob=0.10
+Gen 296: Best=25.13, Avg=28.16, Diversity=197.26
+[RL] Gen 296: Action=7, Reward=-0.100, MutRate=0.099, CrossRate=0.800, LS_Prob=0.05
+Gen 297: Best=25.13, Avg=27.40, Diversity=176.37
+[RL] Gen 297: Action=5, Reward=-0.100, MutRate=0.099, CrossRate=0.800, LS_Prob=0.00
+Gen 298: Best=25.13, Avg=26.59, Diversity=161.12
+[RL] Gen 298: Action=2, Reward=-0.100, MutRate=0.099, CrossRate=0.850, LS_Prob=0.00
+Gen 299: Best=25.13, Avg=27.06, Diversity=165.70
+[RL] Gen 299: Action=3, Reward=-0.100, MutRate=0.099, CrossRate=0.800, LS_Prob=0.00
+Saved parameter comparison plot to rl_vs_ga_parameters.png
+Qt: Untested Windows version 10.0 detected!
+Qt: Untested Windows version 10.0 detected!
+Qt: Untested Windows version 10.0 detected!
+Qt: Untested Windows version 10.0 detected!
+Qt: Untested Windows version 10.0 detected!
+Qt: Untested Windows version 10.0 detected!
+Qt: Untested Windows version 10.0 detected!
+Qt: Untested Windows version 10.0 detected!
+Qt: Untested Windows version 10.0 detected!
+Qt: Untested Windows version 10.0 detected!
+
+=== RUN RESULTS ===
+Best Fitness: 25.13
+Total Distance: 23.90 units
+Execution Time: 238.59 seconds
+Generations: 300
+Animation saved as layout_evolution_rlgeneticalgorithm_2.gif
+Qt: Untested Windows version 10.0 detected!
+Qt: Untested Windows version 10.0 detected!
+Qt: Untested Windows version 10.0 detected!
+
+================================================================================
+COMPARISON SUMMARY
+================================================================================
+
+GeneticAlgorithm:
+  Best Fitness:
+    Average: 30.01 ± 0.00
+    Min: 30.01, Max: 30.01
+  Execution Time:
+    Average: 218.41 ± 0.00 seconds
+  Total Distance:
+    Average: 28.54 ± 0.00 units
+
+RLGeneticAlgorithm:
+  Best Fitness:
+    Average: 25.13 ± 0.00
+    Min: 25.13, Max: 25.13
+  Execution Time:
+    Average: 238.59 ± 0.00 seconds
+  Total Distance:
+    Average: 23.90 ± 0.00 units
+
+================================================================================
+PERFORMANCE COMPARISON
+================================================================================
+
+Fitness Improvement: +16.28%
+  → RL-GA achieved 16.28% better fitness
+
+Time Difference: +9.24%
+  → RL-GA took 9.24% longer
+
+Best Solution Found:
+  → RL-GA (Run 1): Fitness = 25.13
+Machine 1: Position=(-1.93, -3.57), Rotation=90.0°
+
+Best Solutions Found:
+Machine 2: Position=(-2.44, 0.60), Rotation=0.0°
+
+Best Solutions Found:
+Machine 3: Position=(-0.10, 4.90), Rotation=180.0°
+
+Best Solutions Found:
+Machine 4: Position=(3.49, 3.61), Rotation=270.0°
+
+Best Solutions Found:
+Machine 5: Position=(6.68, 4.01), Rotation=270.0°
+
+Best Solutions Found:
+Machine 6: Position=(5.98, -0.20), Rotation=0.0°
+
+Best Solutions Found:
+Machine 7: Position=(3.12, -3.32), Rotation=0.0°
+
+Best Solutions Found:
+Machine 8: Position=(1.64, 0.51), Rotation=0.0°
+
+Best Solutions Found:
+
+→ RL-GA (Run 1): Fitness = 25.13
+[RL-GA] Machine 1: Position=(-1.93, -3.57), Rotation=90.0°
+[RL-GA] Machine 2: Position=(-2.44, 0.60), Rotation=0.0°
+[RL-GA] Machine 3: Position=(-0.10, 4.90), Rotation=180.0°
+[RL-GA] Machine 4: Position=(3.49, 3.61), Rotation=270.0°
+[RL-GA] Machine 5: Position=(6.68, 4.01), Rotation=270.0°
+[RL-GA] Machine 6: Position=(5.98, -0.20), Rotation=0.0°
+[RL-GA] Machine 7: Position=(3.12, -3.32), Rotation=0.0°
+[RL-GA] Machine 8: Position=(1.64, 0.51), Rotation=0.0°
+
+→ Standard GA (Run 1): Fitness = 30.01
+[GA] Machine 1: Position=(0.37, -4.90), Rotation=180.0°
+[GA] Machine 2: Position=(-2.44, -1.17), Rotation=0.0°
+[GA] Machine 3: Position=(-0.84, 3.13), Rotation=180.0°
+[GA] Machine 4: Position=(3.19, 2.62), Rotation=180.0°
+[GA] Machine 5: Position=(6.82, 3.24), Rotation=270.0°
+[GA] Machine 6: Position=(9.63, 0.59), Rotation=0.0°
+[GA] Machine 7: Position=(6.59, -2.23), Rotation=0.0°
+[GA] Machine 8: Position=(3.01, -1.00), Rotation=180.0°
+
+Fitness convergence plot saved as 'fitness_convergence.png'
+Qt: Untested Windows version 10.0 detected!
+Qt: Untested Windows version 10.0 detected!
+Qt: Untested Windows version 10.0 detected!
+
+Comparison chart saved as 'optimizer_comparison.png'
