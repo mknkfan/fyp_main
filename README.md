@@ -1,25 +1,48 @@
 # Final Year Project
 
-This repository contains the code and results for my final year project on [brief description of the project, e.g., genetic algorithms and reinforcement learning for optimization problems].
+This repository contains the code and experimental results for a Final Year Project on **robotic workcell layout optimization** using a hybrid **Genetic Algorithm (GA)** and **Reinforcement Learning (RL)** framework.
 
-## Structure
+The objective is to optimize machine placement and orientation within a constrained workspace to **minimize robot travel distance** while ensuring **collision-free layouts**.
 
-- `algo/`: Core algorithms including genetic algorithm and RL agent implementations.
-- `func/`: Utility functions for collision detection and data structures.
-- `tests/`: Test scripts and notebooks for benchmarking.
-- `visual/`: Visualization tools.
-- `results_*/`: Output directories with plots and data from experiments.
-- `rl_agent/`: Saved Q-tables for RL agents.
+---
 
-## Requirements
+## 📁 Project Structure
 
-- Python 3.x
-- Required packages: [list main ones if known, e.g., numpy, matplotlib]
+- `algo/`  
+  Core optimization algorithms, including:
+  - Genetic Algorithm (GA)
+  - RL-assisted GA (RL-GA)
+  - Q-learning agent for adaptive parameter control  
 
-## Usage
+- `func/`  
+  Supporting utilities:
+  - Machine and workspace data structures :contentReference[oaicite:0]{index=0}  
+  - Collision detection and geometric feasibility checks :contentReference[oaicite:1]{index=1}  
 
-[Add instructions on how to run the main scripts]
+- `visual/`  
+  Visualization tools for:
+  - Layout rendering  
+  - Optimization progress (fitness, convergence) :contentReference[oaicite:2]{index=2}  
 
-## Results
+- `tests/`  
+  Scripts and notebooks for benchmarking different problem instances and configurations  
 
-[Brief summary of findings]
+- `results_*/`  
+  Experimental outputs including:
+  - Fitness convergence plots  
+  - Layout evolution images  
+  - Performance comparison data  
+
+- `rl_agent/`  
+  Stored Q-tables from trained RL agents  
+
+---
+
+## ⚙️ Requirements
+
+- Python **3.8+**
+
+### Required Packages
+
+```bash
+pip install numpy matplotlib

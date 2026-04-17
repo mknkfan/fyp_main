@@ -502,5 +502,4 @@ def solve_new_problem_with_trained_agent(
 # ============================================================
 
 if __name__ == "__main__":
-    # Adjust num_epochs and q_table_path as you wish
     train_agent(num_epochs=3, q_table_path="rl_ga_q_table.npy")
