@@ -16,13 +16,13 @@ The objective is to optimize machine placement and orientation within a constrai
 
 - `func/`  
   Supporting utilities:
-  - Machine and workspace data structures :contentReference[oaicite:0]{index=0}  
-  - Collision detection and geometric feasibility checks :contentReference[oaicite:1]{index=1}  
+  - Machine and workspace data structures 
+  - Collision detection and geometric feasibility checks 
 
 - `visual/`  
   Visualization tools for:
   - Layout rendering  
-  - Optimization progress (fitness, convergence) :contentReference[oaicite:2]{index=2}  
+  - Optimization progress (fitness, convergence) 
 
 - `tests/`  
   Scripts and notebooks for benchmarking different problem instances and configurations  
