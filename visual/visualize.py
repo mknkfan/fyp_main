@@ -337,3 +337,199 @@ def plot_rl_vs_ga_parameters(results: dict, save_path: str = None):
         print(f"Saved parameter comparison plot to {save_path}")
 
     plt.show()
+
+
+# ============================================================
+# RL agent training curves
+# ============================================================
+
+# Categorical slots 1-3 of the reference palette (validated for all-pairs
+# separation under colour-vision deficiency in both light and dark modes).
+_SERIES_1 = "#2a78d6"  # blue
+_SERIES_2 = "#eb6834"  # orange
+_SERIES_3 = "#1baf7a"  # aqua
+_INK_MUTED = "#8a8a85"
+
+
+def _rolling_mean(values: np.ndarray, window: int) -> np.ndarray:
+    """Centred rolling mean, shrinking the window at the edges."""
+    values = np.asarray(values, dtype=float)
+    n = len(values)
+    if n == 0:
+        return values
+    window = max(1, min(window, n))
+    out = np.empty(n, dtype=float)
+    half = window // 2
+    for i in range(n):
+        lo = max(0, i - half)
+        hi = min(n, i + half + 1)
+        out[i] = np.mean(values[lo:hi])
+    return out
+
+
+def plot_rl_training_progress(
+    history: Dict,
+    save_path: Optional[str] = None,
+    show: bool = True,
+):
+    """
+    Plot how the RL agent evolves over a full training session.
+
+    `history` is the dict returned by algo.train_rl_agent.train_agent()
+    (also saved as an .npz), containing per-run and per-generation records.
+
+    Four panels, each on a single y-axis:
+      1. Reward per training run (raw + rolling mean over one full pass)
+      2. Reward per credited generation across the whole session (smoothed)
+      3. Normalised best fitness vs pass number - did solutions get better?
+      4. Q-table update magnitude per run - did the agent converge?
+    """
+    run_reward_sum = np.asarray(history["run_reward_sum"], dtype=float)
+    run_problem = np.asarray(history["run_problem"], dtype=int)
+    run_best_fitness = np.asarray(history["run_best_fitness"], dtype=float)
+    run_q_delta = np.asarray(history["run_q_delta"], dtype=float)
+    gen_rewards = np.asarray(history["gen_rewards"], dtype=float)
+
+    num_problems = int(history["num_problems"])
+    runs_per_problem = int(history["runs_per_problem"])
+    num_runs = len(run_reward_sum)
+    runs = np.arange(1, num_runs + 1)
+
+    fig, axes = plt.subplots(2, 2, figsize=(14, 9))
+
+    # -------- 1. Reward per run --------
+    ax = axes[0, 0]
+    ax.plot(runs, run_reward_sum, linewidth=1, color=_INK_MUTED, alpha=0.7,
+            label="Per run")
+    ax.plot(runs, _rolling_mean(run_reward_sum, num_problems), linewidth=2,
+            color=_SERIES_1, label=f"Rolling mean ({num_problems} runs)")
+    ax.axhline(0, color="black", linewidth=1, alpha=0.4)
+    ax.set_xlabel("Training run")
+    ax.set_ylabel("Total reward")
+    ax.set_title("Reward per training run")
+    ax.legend()
+    ax.grid(alpha=0.3)
+
+    # -------- 2. Reward per credited generation --------
+    ax = axes[0, 1]
+    if len(gen_rewards):
+        gens = np.arange(1, len(gen_rewards) + 1)
+        # Keep the smoothed line meaningfully different from the raw series,
+        # otherwise it just paints over it and the legend lies.
+        window = max(5, len(gen_rewards) // 100)
+        ax.plot(gens, gen_rewards, linewidth=0.5, color=_INK_MUTED, alpha=0.35,
+                label="Per decision")
+        ax.plot(gens, _rolling_mean(gen_rewards, window), linewidth=2,
+                color=_SERIES_2, label=f"Rolling mean ({window} decisions)")
+        ax.axhline(0, color="black", linewidth=1, alpha=0.4)
+        ax.legend()
+    ax.set_xlabel("RL decision (cumulative over training)")
+    ax.set_ylabel("Reward")
+    ax.set_title("Reward signal over the whole session")
+    ax.grid(alpha=0.3)
+
+    # -------- 3. Normalised best fitness vs pass number --------
+    # Each problem's runs are divided by that problem's own mean, so the 15
+    # layouts (which have very different absolute distances) are comparable.
+    ax = axes[1, 0]
+    passes = np.arange(1, runs_per_problem + 1)
+    normalised = np.full((num_problems, runs_per_problem), np.nan)
+    for p in range(num_problems):
+        vals = run_best_fitness[run_problem == p]
+        if len(vals) and np.mean(vals) != 0:
+            normalised[p, : len(vals)] = vals[:runs_per_problem] / np.mean(vals)
+
+    mean_by_pass = np.nanmean(normalised, axis=0)
+    std_by_pass = np.nanstd(normalised, axis=0)
+    ax.fill_between(passes, mean_by_pass - std_by_pass, mean_by_pass + std_by_pass,
+                    color=_SERIES_3, alpha=0.15, label="+/- 1 SD across problems")
+    ax.plot(passes, mean_by_pass, linewidth=2, color=_SERIES_3, marker="o",
+            markersize=6, label="Mean across problems")
+    ax.axhline(1.0, color="black", linestyle="--", linewidth=1, alpha=0.4)
+    ax.set_xlabel("Pass number (run index within each problem)")
+    ax.set_ylabel("Best fitness / problem mean")
+    ax.set_title("Solution quality as training progresses")
+    ax.set_xticks(passes)
+    ax.legend()
+    ax.grid(alpha=0.3)
+
+    # -------- 4. Q-table convergence --------
+    ax = axes[1, 1]
+    ax.plot(runs, run_q_delta, linewidth=1, color=_INK_MUTED, alpha=0.7,
+            label="Per run")
+    ax.plot(runs, _rolling_mean(run_q_delta, num_problems), linewidth=2,
+            color=_SERIES_1, label=f"Rolling mean ({num_problems} runs)")
+    ax.set_xlabel("Training run")
+    ax.set_ylabel("||Q_after - Q_before||")
+    ax.set_title("Q-table update magnitude (convergence)")
+    ax.legend()
+    ax.grid(alpha=0.3)
+
+    fig.suptitle(
+        f"RL agent training: {num_problems} problems x {runs_per_problem} runs "
+        f"= {num_runs} GA runs",
+        fontsize=13,
+    )
+    plt.tight_layout()
+
+    if save_path:
+        plt.savefig(save_path, dpi=300, bbox_inches="tight")
+        print(f"Saved RL training progress plot to {save_path}")
+
+    if show:
+        plt.show()
+    else:
+        plt.close(fig)
+
+
+def plot_q_table(q_table: np.ndarray, save_path: Optional[str] = None, show: bool = True):
+    """
+    Heat map of the learned Q-table (states x actions).
+
+    Sequential single-hue ramp for magnitude; values are printed in each cell so
+    the reading never depends on colour alone.
+    """
+    action_labels = [
+        "mut+", "mut-", "cross+", "cross-",
+        "LS+", "LS-", "cycle mut", "soft reset",
+    ]
+    state_labels = [
+        f"div{d}/imp{i}" for d in ("lo", "md", "hi") for i in ("neg", "sml", "big")
+    ]
+
+    fig, ax = plt.subplots(figsize=(10, 6))
+    im = ax.imshow(q_table, cmap="Blues", aspect="auto")
+
+    ax.set_xticks(range(q_table.shape[1]))
+    ax.set_xticklabels(action_labels[: q_table.shape[1]], rotation=30, ha="right")
+    ax.set_yticks(range(q_table.shape[0]))
+    ax.set_yticklabels(state_labels[: q_table.shape[0]])
+    ax.set_xlabel("Action")
+    ax.set_ylabel("State (diversity / improvement bin)")
+    ax.set_title("Learned Q-table")
+
+    # Direct value labels - identity never rests on colour alone.
+    # Q values are small, so pick a precision that does not collapse to "0.000",
+    # and threshold the label colour on imshow's own min..max normalisation.
+    lo, hi = float(np.min(q_table)), float(np.max(q_table))
+    span = (hi - lo) or 1.0
+    scale = np.max(np.abs(q_table))
+    decimals = 3 if scale >= 0.01 else 5
+    for r in range(q_table.shape[0]):
+        for c in range(q_table.shape[1]):
+            val = float(q_table[r, c])
+            label = "0" if val == 0 else f"{val:.{decimals}f}"
+            ax.text(c, r, label, ha="center", va="center", fontsize=8,
+                    color="#ffffff" if (val - lo) / span > 0.6 else "#0b0b0b")
+
+    fig.colorbar(im, ax=ax, label="Q value")
+    plt.tight_layout()
+
+    if save_path:
+        plt.savefig(save_path, dpi=300, bbox_inches="tight")
+        print(f"Saved Q-table heat map to {save_path}")
+
+    if show:
+        plt.show()
+    else:
+        plt.close(fig)
