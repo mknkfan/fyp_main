@@ -23,7 +23,7 @@ class RLGeneticAlgorithmRand(GeneticAlgorithm):
         robot_position: Point,
         workspace_bounds: Tuple[float, float, float, float],
         rl_agent: Optional[QLearningAgent] = None,
-        control_interval: int = 5,
+        control_interval: int = 1,
     ):
         super().__init__(machines, sequence, robot_position, workspace_bounds)
 
