@@ -1,7 +1,7 @@
 from func.datastruct import Point, Machine
 from algo.gen_algo_init import GeneticAlgorithm
 from algo.agent import QLearningAgent
-from algo.gen_algo_rl_init import RLGeneticAlgorithm
+from algo.gen_algo_rl_init_rand import RLGeneticAlgorithmRand
 import numpy as np
 import random
 import os
@@ -69,17 +69,17 @@ def main():
     # =========================
     # Config
     # =========================
-    runs_per_problem = 3
+    runs_per_problem = 10
     num_problems = 10
 
-    BASE_RESULTS_DIR = "results_500_300_8"
+    BASE_RESULTS_DIR = "results_rand_200_300_15"
     os.makedirs(BASE_RESULTS_DIR, exist_ok=True)
 
     # =========================
     # Load trained agent (base weights)
     # =========================
     base_agent = QLearningAgent(state_size=9, action_size=8)
-    base_agent.q_table = np.load("rl_agent/rl_ga_q_table_500_300_8.npy")
+    base_agent.q_table = np.load("rl_agent/rl_ga_q_table_rand_200_300_15.npy")
     base_agent.epsilon = 0.05  # low exploration during evaluation
 
     all_problems_results = {}
@@ -126,7 +126,7 @@ def main():
         print(f"Sequence: {sequence}")
         print(f"Workspace: {workspace_bounds}\n")
 
-        optimizer_list = [GeneticAlgorithm, RLGeneticAlgorithm]
+        optimizer_list = [GeneticAlgorithm, RLGeneticAlgorithmRand]
 
         # -------------------------
         # Per-problem results store
@@ -138,7 +138,7 @@ def main():
                 "total_distance": [],
                 "final_machines": [],
             },
-            "RLGeneticAlgorithm": {
+            "RLGeneticAlgorithmRand": {
                 "best_fitness": [],
                 "execution_time": [],
                 "total_distance": [],
@@ -175,7 +175,7 @@ def main():
                 optimizer_name = OptimizerClass.__name__
                 print(f"\n--- {optimizer_name} ---")
 
-                if optimizer_name == "RLGeneticAlgorithm":
+                if optimizer_name == "RLGeneticAlgorithmRand":
                     # Fresh RL agent for every RL-GA run
                     rl_agent = QLearningAgent(state_size=9, action_size=8)
                     rl_agent.q_table = base_agent.q_table.copy()
@@ -254,10 +254,10 @@ def main():
         # Performance comparison
         # =========================
         ga_avg_fitness = float(np.mean(comparison_results["GeneticAlgorithm"]["best_fitness"]))
-        rl_avg_fitness = float(np.mean(comparison_results["RLGeneticAlgorithm"]["best_fitness"]))
+        rl_avg_fitness = float(np.mean(comparison_results["RLGeneticAlgorithmRand"]["best_fitness"]))
 
         ga_avg_time = float(np.mean(comparison_results["GeneticAlgorithm"]["execution_time"]))
-        rl_avg_time = float(np.mean(comparison_results["RLGeneticAlgorithm"]["execution_time"]))
+        rl_avg_time = float(np.mean(comparison_results["RLGeneticAlgorithmRand"]["execution_time"]))
 
         fitness_improvement = ((ga_avg_fitness - rl_avg_fitness) / ga_avg_fitness) * 100.0 if ga_avg_fitness != 0 else 0.0
         time_difference = ((rl_avg_time - ga_avg_time) / ga_avg_time) * 100.0 if ga_avg_time != 0 else 0.0
@@ -271,15 +271,15 @@ def main():
 
         # Best solutions
         best_ga_idx = int(np.argmin(comparison_results["GeneticAlgorithm"]["best_fitness"]))
-        best_rl_idx = int(np.argmin(comparison_results["RLGeneticAlgorithm"]["best_fitness"]))
+        best_rl_idx = int(np.argmin(comparison_results["RLGeneticAlgorithmRand"]["best_fitness"]))
 
         best_ga_fitness = comparison_results["GeneticAlgorithm"]["best_fitness"][best_ga_idx]
-        best_rl_fitness = comparison_results["RLGeneticAlgorithm"]["best_fitness"][best_rl_idx]
+        best_rl_fitness = comparison_results["RLGeneticAlgorithmRand"]["best_fitness"][best_rl_idx]
 
         print(f"\nBest Solution Found in Problem {problem_id}:")
         if best_rl_fitness < best_ga_fitness:
             print(f"  → RL-GA (Run {best_rl_idx + 1}): Fitness = {best_rl_fitness:.2f}")
-            best_machines = comparison_results["RLGeneticAlgorithm"]["final_machines"][best_rl_idx]
+            best_machines = comparison_results["RLGeneticAlgorithmRand"]["final_machines"][best_rl_idx]
         else:
             print(f"  → Standard GA (Run {best_ga_idx + 1}): Fitness = {best_ga_fitness:.2f}")
             best_machines = comparison_results["GeneticAlgorithm"]["final_machines"][best_ga_idx]
@@ -298,11 +298,11 @@ def main():
         np.savez(
             os.path.join(problem_dir, "comparison_results.npz"),
             ga_best_fitness=np.array(comparison_results["GeneticAlgorithm"]["best_fitness"]),
-            rl_best_fitness=np.array(comparison_results["RLGeneticAlgorithm"]["best_fitness"]),
+            rl_best_fitness=np.array(comparison_results["RLGeneticAlgorithmRand"]["best_fitness"]),
             ga_execution_time=np.array(comparison_results["GeneticAlgorithm"]["execution_time"]),
-            rl_execution_time=np.array(comparison_results["RLGeneticAlgorithm"]["execution_time"]),
+            rl_execution_time=np.array(comparison_results["RLGeneticAlgorithmRand"]["execution_time"]),
             ga_total_distance=np.array(comparison_results["GeneticAlgorithm"]["total_distance"]),
-            rl_total_distance=np.array(comparison_results["RLGeneticAlgorithm"]["total_distance"]),
+            rl_total_distance=np.array(comparison_results["RLGeneticAlgorithmRand"]["total_distance"]),
         )
 
         # =========================
@@ -318,7 +318,7 @@ def main():
                 [ga_avg_fitness, rl_avg_fitness],
                 yerr=[
                     np.std(comparison_results["GeneticAlgorithm"]["best_fitness"]),
-                    np.std(comparison_results["RLGeneticAlgorithm"]["best_fitness"]),
+                    np.std(comparison_results["RLGeneticAlgorithmRand"]["best_fitness"]),
                 ],
                 capsize=5,
                 alpha=0.7,
@@ -332,7 +332,7 @@ def main():
                 [ga_avg_time, rl_avg_time],
                 yerr=[
                     np.std(comparison_results["GeneticAlgorithm"]["execution_time"]),
-                    np.std(comparison_results["RLGeneticAlgorithm"]["execution_time"]),
+                    np.std(comparison_results["RLGeneticAlgorithmRand"]["execution_time"]),
                 ],
                 capsize=5,
                 alpha=0.7,
